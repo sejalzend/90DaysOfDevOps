@@ -20,17 +20,17 @@
 * `mv` - Moves or renames a file or directory
   * Example: `cp source_file.txt destination/` 
 * `rm` - Deletes a file or an entire directory (with the `-r` option for directories)
-  *Example: `rm file_to_delete.txt ` 
+  * Example: `rm file_to_delete.txt ` 
 * `rmdir` - Deletes an *empty* directory from the file system
-  *Example: `rmdir empty_folder` removes the specified empty directory 
+  * Example: `rmdir empty_folder` removes the specified empty directory 
 * `less` - Allows viewing the content of a file one page at a time, useful for large files (press *q* to quit)
-  *Example: `less large_log_file.txt` opens the file for interactive viewing  
+  * Example: `less large_log_file.txt` opens the file for interactive viewing  
 * `head` - Displays the first few lines (default is 10) of a file
-  *Example: `head -n 5 file.txt` shows the first 5 lines
+  * Example: `head -n 5 file.txt` shows the first 5 lines
 * `tail` - Displays the last few lines (default is 10) of a file
-  *Example: `tail -f log_file.txt` watches the end of a log file in real-time
+  * Example: `tail -f log_file.txt` watches the end of a log file in real-time
 * `grep` - Searches for a specified text pattern within files
-  *Example: `grep "error" logfile.txt` prints lines containing the word "error"
+  * Example: `grep "error" logfile.txt` prints lines containing the word "error"
 
 ---
 
