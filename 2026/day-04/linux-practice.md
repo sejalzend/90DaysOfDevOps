@@ -18,7 +18,7 @@
 ## Service Commands
 
 * `systemctl status nginx` - Shows the status of the service (Active or Inactive) 
-![snapshot](images/systemctl-status-nginx)
+![snapshot](images/systemctl_status_nginx.png)
 
 ---
 * `systemctl list-units --type=service --state=inactive` - Lists all the inactive service units that uses systemd 
@@ -51,5 +51,5 @@
 ---
 
 * `systemctl status nginx` - Shows the status of *Nginx* service. It is successfully up and running
-![snapshot](images/systemctl_status_nginx_active.png)
+![snapshot](images/sytemctl_status_nginx_active.png)
 
