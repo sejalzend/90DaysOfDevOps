@@ -18,6 +18,7 @@
 
 ## Home Directories of Users
 * Created all the users under the `/home` directory
+
 ![snapshot](images/users_home.png)
 
 ## Shared Directory
@@ -34,7 +35,8 @@
 4. Create `/opt/team-workspace` directory
 5. Set group to `project-team` permissions to `775`
 6. Test by creating file `nairobi`
-![snapshot](/images/team_workspace.png)
+
+![snapshot](images/team_workspace.png)
 
 # Commands Used
 * `useradd -m uname` - Add user with default directory
