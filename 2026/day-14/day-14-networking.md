@@ -46,7 +46,7 @@ These networking protocols are organized into a "stack" or "model" to manage how
  * Identity: `hostname -I` (or `ip addr show`)
    * The `hostname -I` command displys all the **IP addresses associated with the host system** across all network interfaces, except for loopback and IPv6 link-local addresses. The `ip addr show` command provides detailed information about all network interfaces on the system.
 
-[screenshot](images/hostname-I-1.png)
+![snapshot](images/hostname-I-1.png)
 
  * Reachability: `ping <target>`
    * This tool is used to test connectivity between your computer and another device on a network or the internet. It operates by sending small data packets and waiting for a response. It lets a user test and verify whether a specific destination IP address exists and can accept or respond to requests in computer network administration
@@ -55,7 +55,7 @@ These networking protocols are organized into a "stack" or "model" to manage how
  * Ports: `ss -tulpn` or `netstat -tulpn`
    * Command is used to check which ports are open and which services (processes) are listening on them
 
-[screenshot](images/netstat.png)
+![snapshot](images/netstat.png)
    
  * Name resolution: `dig <domain>` or `nslookup <domain>`
    * It returns basic DNS information. `dig` is used for debugging, while `nslookup` gives a simpler, basic DNS lookup
@@ -70,7 +70,7 @@ These networking protocols are organized into a "stack" or "model" to manage how
   * From the same machine, test it: `nc -zv localhost <port>`
     *  It checks if port 22 is open locally by attempting a TCP connection, confirming that the SSH service is running and reachable
 
-[screenshot](images/nc-zv.png)
+![snapshot](images/nc-zv.png)
     
   * Write one line: is it reachable? If not, what's the next check? (e.g., service status, firewall)
     * It is rechable. If not check with `systemctl status ssh`. It shows whether the service is running or inactive
