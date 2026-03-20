@@ -46,7 +46,7 @@ These networking protocols are organized into a "stack" or "model" to manage how
  * Identity: `hostname -I` (or `ip addr show`)
    * The `hostname -I` command displys all the **IP addresses associated with the host system** across all network interfaces, except for loopback and IPv6 link-local addresses. The `ip addr show` command provides detailed information about all network interfaces on the system.
 
-[screenshot](imges/hostnmae-I-1.png)
+[screenshot](images/hostname-I-1.png)
 
  * Reachability: `ping <target>`
    * This tool is used to test connectivity between your computer and another device on a network or the internet. It operates by sending small data packets and waiting for a response. It lets a user test and verify whether a specific destination IP address exists and can accept or respond to requests in computer network administration
