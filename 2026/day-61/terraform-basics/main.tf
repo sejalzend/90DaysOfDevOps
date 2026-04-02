@@ -13,7 +13,7 @@ provider "aws" {
   region = "us-west-2"
 }
 
-# Create S3 bucket
+# Creating S3 bucket
 resource "aws_s3_bucket" "my_bucket" {
 
   bucket = "terraweek-sejal-2026"
