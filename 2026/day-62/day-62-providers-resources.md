@@ -58,7 +58,7 @@ Answer these questions:
     * Terraform sees `vpc.id = aws_vpc.vpc.id` this reference and automatically schedules the VPC for creation before the subnet
 
 * What would happen if you tried to create the subnet before the VPC existed?
-    *Terraform will attempt to call the cloud provider's API. The API will return an error such as 
+    * Terraform will attempt to call the cloud provider's API. The API will return an error such as 
     * **For AWS:** - `InvalidVpcID.NotFound` The VPC ID `vpc_vpc.id` does not exist
     
 * Find all implicit dependencies in your config and list them
