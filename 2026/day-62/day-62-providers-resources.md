@@ -16,9 +16,10 @@
     * The `.terraform.lock.hcl` file is a dependency lock file that ensures your project uses the same exact provider versions and code every time it runs.
 
 **Document:** What does `~> 5.0` mean? How is it different from `>=5.0` and `= 5.0.0`?
-    * `~> 5.0` - Pessimistic Constraint. Allows any version that is 5.0, but less than 6.0
-    * `>=5.0` - Allows any version above 5.0, anything newer even if it's 10.0
-    * `= 5.0.0` - Exact Pin. Forces terraform to use only version `5.0, requires manual updates for every change
+
+* `~> 5.0` - Pessimistic Constraint. Allows any version that is 5.0, but less than 6.0
+* `>=5.0` - Allows any version above 5.0, anything newer even if it's 10.0
+* `= 5.0.0` - Exact Pin. Forces terraform to use only version `5.0, requires manual updates for every change
 
 ---
 
@@ -51,15 +52,16 @@ Look at your `main.tf` carefully:
 3. The route table association reference both the route table and the subnet
 
 Answer these questions:
-    * How does Terraform know to create the VPC before the subnet?
-        * Terraform determines the creation order by building a **Dependency Graph**. It does not simply read your code from top to bottom; instead, it analyzes the relationships between resources to understand which must exist first.
-        * Terraform sees `vpc.id = aws_vpc.vpc.id` this reference and automatically schedules the VPC for creation before the subnet
 
-    * What would happen if you tried to create the subnet before the VPC existed?
-        Terraform will attempt to call the cloud provider's API. The API will return an error such as 
-        * **For AWS:** - `InvalidVpcID.NotFound` The VPC ID `vpc_vpc.id` does not exist
+* How does Terraform know to create the VPC before the subnet?
+    * Terraform determines the creation order by building a **Dependency Graph**. It does not simply read your code from top to bottom; instead, it analyzes the relationships between resources to understand which must exist first.
+    * Terraform sees `vpc.id = aws_vpc.vpc.id` this reference and automatically schedules the VPC for creation before the subnet
+
+* What would happen if you tried to create the subnet before the VPC existed?
+    *Terraform will attempt to call the cloud provider's API. The API will return an error such as 
+    * **For AWS:** - `InvalidVpcID.NotFound` The VPC ID `vpc_vpc.id` does not exist
     
-    * Find all implicit dependencies in your config and list them
+* Find all implicit dependencies in your config and list them
 
 | Resource Relationship                       | Terraform Reference Mapping                                                         |
 |---------------------------------------------|-------------------------------------------------------------------------------------|
